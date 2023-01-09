@@ -1,6 +1,7 @@
 import requests
 import re
 import datetime
+import os
 from bs4 import BeautifulSoup
 
 """
@@ -9,10 +10,10 @@ Telgram Bot Docs: https://core.telegram.org/bots
 """
 
 # User Vars
-uprn = ''
-token = ''
-chat_id = ''
-notify_days = 1
+uprn = os.getenv("UPRN", "")
+token = os.getenv("TOKEN", "")
+chat_id = os.getenv("CHAT_ID", "")
+notify_days = os.getenv("NOTIFY_DAYS", 1)
 
 # Sends markdown formatted message
 def send_telegram_message(message):
@@ -56,6 +57,7 @@ def main():
 
     # Get our collection dates and look for any collection that are tomorrows date
     data = get_collection_dates()
+
     for bin, value in data.items():
         for date in value:
             if date == notify_date:

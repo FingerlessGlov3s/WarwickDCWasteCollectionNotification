@@ -16,6 +16,11 @@ By default this script will notify you the day before, so you may get yourself r
    * `chat_id` telegram chat id
    * `notify_days` day number to notify before collection to send notification. 1 being the day before, 0 will notify on day of collection, Default value 1
 
+# Docker
+   1. Run `docker build -t wdcwcn:latest .` to build the docker image.
+   1. Start the container by running: `docker run -it -e UPRN=0011101000101001 wdcwcn:latest`
+   1. All the "User Variables" are available, just pass in as capital values, i.e `token = TOKEN`
+
 # Example message received
 ```
 Waste Collection (10/01/2023)
