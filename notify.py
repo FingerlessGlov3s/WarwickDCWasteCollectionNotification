@@ -12,7 +12,7 @@ Telgram Bot Docs: https://core.telegram.org/bots
 uprn = ''
 token = ''
 chat_id = ''
-notify_days = 0
+notify_days = 1
 
 # Sends markdown formatted message
 def send_telegram_message(message):
