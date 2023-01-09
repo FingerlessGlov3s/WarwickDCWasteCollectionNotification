@@ -1,6 +1,6 @@
 # Warwick District Council Waste Collection Notification
 
-This python script is used to monitor your property's waste collections dates and notify you what collection is happening.
+This python script is used to monitor your property's waste collections dates and notify you what collection is happening (via telegram).
 By default this script will notify you the day before, so you may get yourself ready the night before.
 
 # Install
