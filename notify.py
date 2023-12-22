@@ -43,7 +43,7 @@ def get_collection_dates():
                 heading_items.remove(item)
         heading = ' '.join(heading_items)
         date_elements = div.find_all('p')
-        dates = [tag.text for tag in date_elements if re.match(r'^\d{2}\/\d{2}\/\d{4}$', tag.text)]
+        dates = [re.sub(r'[^0-9\/]', '', tag.text) for tag in date_elements if re.match(r'^\d{2}\/\d{2}\/\d{4}$', re.sub(r'[^0-9\/]', '', tag.text))]
         data[heading] = dates
     return data
 
